@@ -28,6 +28,7 @@ No provider.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| enabled | Whether or not this module should create any resources. | `bool` | `true` | no |
 | ovh\_application\_key | The API Application Key. If omitted, the `OVH_APPLICATION_KEY` environment variable is used. | `string` | `null` | no |
 | ovh\_application\_secret | The API Application Secret. If omitted, the `OVH_APPLICATION_SECRET` environment variable is used. | `string` | `null` | no |
 | ovh\_consumer\_key | The API Consumer key. If omitted, the `OVH_CONSUMER_KEY` environment variable is used. | `string` | `null` | no |
