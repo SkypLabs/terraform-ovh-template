@@ -26,7 +26,12 @@ No provider.
 
 ## Inputs
 
-No input.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| ovh\_application\_key | The API Application Key. If omitted, the `OVH_APPLICATION_KEY` environment variable is used. | `string` | `null` | no |
+| ovh\_application\_secret | The API Application Secret. If omitted, the `OVH_APPLICATION_SECRET` environment variable is used. | `string` | `null` | no |
+| ovh\_consumer\_key | The API Consumer key. If omitted, the `OVH_CONSUMER_KEY` environment variable is used. | `string` | `null` | no |
+| ovh\_endpoint | Specify which API endpoint to use. It can be set using the `OVH_ENDPOINT` environment variable. e.g. `ovh-eu` or `ovh-ca`. | `string` | `null` | no |
 
 ## Outputs
 
