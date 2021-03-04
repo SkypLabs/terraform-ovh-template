@@ -1,8 +1,10 @@
-# Terraform Module Template
+# Terraform OVH Template
 
-Template of a minimal Terraform module.
+Template of a minimal Terraform module for OVH. It is itself based on my
+[Terraform Module Template][terraform-module-template].
 
-This module follows the [standard structure][standard-module-structure] described in the [Terraform documentation][terraform-docs].
+This module follows the [standard structure][standard-module-structure]
+described in the [Terraform documentation][terraform-docs].
 
 The following non-standard but commonly used files and folders have also been added:
 
@@ -10,14 +12,16 @@ The following non-standard but commonly used files and folders have also been ad
 * `data.tf`
 * `templates`
 
-A [pre-commit][pre-commit] configuration file is present to automatically format and validate the code and update the readme file upon Git commits.
+A [pre-commit][pre-commit] configuration file is present to automatically format
+and validate the code and update the readme file upon Git commits.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.0 |
+| terraform | >= 0.13.0 |
+| ovh | ~> 0.11 |
 
 ## Providers
 
@@ -25,7 +29,13 @@ No provider.
 
 ## Inputs
 
-No input.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| enabled | Whether or not this module should create any resources. | `bool` | `true` | no |
+| ovh\_application\_key | The API Application Key. If omitted, the `OVH_APPLICATION_KEY` environment variable is used. | `string` | `null` | no |
+| ovh\_application\_secret | The API Application Secret. If omitted, the `OVH_APPLICATION_SECRET` environment variable is used. | `string` | `null` | no |
+| ovh\_consumer\_key | The API Consumer key. If omitted, the `OVH_CONSUMER_KEY` environment variable is used. | `string` | `null` | no |
+| ovh\_endpoint | Specify which API endpoint to use. It can be set using the `OVH_ENDPOINT` environment variable. e.g. `ovh-eu` or `ovh-ca`. | `string` | `null` | no |
 
 ## Outputs
 
@@ -36,3 +46,4 @@ No output.
  [pre-commit]: https://pre-commit.com/ "pre-commit Website"
  [standard-module-structure]: https://www.terraform.io/docs/modules/index.html#standard-module-structure "Terraform Documentation - Standard Module Structure"
  [terraform-docs]: https://www.terraform.io/docs/ "Terraform Documentation"
+ [terraform-module-template]: https://github.com/SkypLabs/terraform-module-template "SkypLabs - Terraform Module Template"
