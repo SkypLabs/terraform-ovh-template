@@ -10,7 +10,9 @@ The following non-standard but commonly used files and folders have also been ad
 
 * `local.tf`
 * `data.tf`
+* `providers.tf`
 * `templates`
+* `versions.tf`
 
 A [pre-commit][pre-commit] configuration file is present to automatically format
 and validate the code and update the readme file upon Git commits.
@@ -20,27 +22,34 @@ and validate the code and update the readme file upon Git commits.
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.13.0 |
-| ovh | ~> 0.11 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
+| <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 0.11 |
 
 ## Providers
 
-No provider.
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| enabled | Whether or not this module should create any resources. | `bool` | `true` | no |
-| ovh\_application\_key | The API Application Key. If omitted, the `OVH_APPLICATION_KEY` environment variable is used. | `string` | `null` | no |
-| ovh\_application\_secret | The API Application Secret. If omitted, the `OVH_APPLICATION_SECRET` environment variable is used. | `string` | `null` | no |
-| ovh\_consumer\_key | The API Consumer key. If omitted, the `OVH_CONSUMER_KEY` environment variable is used. | `string` | `null` | no |
-| ovh\_endpoint | Specify which API endpoint to use. It can be set using the `OVH_ENDPOINT` environment variable. e.g. `ovh-eu` or `ovh-ca`. | `string` | `null` | no |
+| <a name="input_enabled"></a> [enabled](#input\_enabled) | Whether or not this module should create any resources. | `bool` | `true` | no |
+| <a name="input_ovh_application_key"></a> [ovh\_application\_key](#input\_ovh\_application\_key) | The API Application Key. If omitted, the `OVH_APPLICATION_KEY` environment variable is used. | `string` | `null` | no |
+| <a name="input_ovh_application_secret"></a> [ovh\_application\_secret](#input\_ovh\_application\_secret) | The API Application Secret. If omitted, the `OVH_APPLICATION_SECRET` environment variable is used. | `string` | `null` | no |
+| <a name="input_ovh_consumer_key"></a> [ovh\_consumer\_key](#input\_ovh\_consumer\_key) | The API Consumer key. If omitted, the `OVH_CONSUMER_KEY` environment variable is used. | `string` | `null` | no |
+| <a name="input_ovh_endpoint"></a> [ovh\_endpoint](#input\_ovh\_endpoint) | Specify which API endpoint to use. It can be set using the `OVH_ENDPOINT` environment variable. e.g. `ovh-eu` or `ovh-ca`. | `string` | `null` | no |
 
 ## Outputs
 
-No output.
-
+No outputs.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
  [pre-commit]: https://pre-commit.com/ "pre-commit Website"
