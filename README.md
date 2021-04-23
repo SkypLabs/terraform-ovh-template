@@ -10,7 +10,9 @@ The following non-standard but commonly used files and folders have also been ad
 
 * `local.tf`
 * `data.tf`
+* `providers.tf`
 * `templates`
+* `versions.tf`
 
 A [pre-commit][pre-commit] configuration file is present to automatically format
 and validate the code and update the readme file upon Git commits.
