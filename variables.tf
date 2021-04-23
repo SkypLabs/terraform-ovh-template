@@ -13,6 +13,10 @@ variable "enabled" {
   default     = true
 }
 
+# ----------------------------------------
+# OVH Provider
+# ----------------------------------------
+
 variable "ovh_endpoint" {
   description = "Specify which API endpoint to use. It can be set using the `OVH_ENDPOINT` environment variable. e.g. `ovh-eu` or `ovh-ca`."
   type        = string
